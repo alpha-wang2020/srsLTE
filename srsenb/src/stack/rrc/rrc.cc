@@ -1042,7 +1042,7 @@ rrc::ue::ue(rrc* outer_rrc, uint16_t rnti_, const sched_interface::ue_cfg_t& sch
   if (cqi_allocate(parent->cfg.cqi_cfg.period, UE_PCELL_CC_IDX) != SRSLTE_SUCCESS) {
     return;
   }
-  if (sr_allocate(parent->cfg.cqi_cfg.period) != SRSLTE_SUCCESS) {
+  if (sr_allocate(parent->cfg.sr_cfg.period) != SRSLTE_SUCCESS) {
     return;
   }
   if (parent->cfg.cell_list.size() > 1) {
